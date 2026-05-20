@@ -1,5 +1,7 @@
 # Got GRIP?
 
+**[Play the demo →](https://majos95.github.io/grip-game/)**
+
 A timed classification game for conference booth engagement. Players read short business problem scenarios and classify each into one of three solution domains: **Experience** (UX/Design), **Foundation** (Core Systems), or **Intelligence** (Agentic AI). Speed + accuracy = score. Results reveal blind spots.
 
 ## Prerequisites
@@ -93,7 +95,8 @@ grip-game/
 ├── docs/
 │   ├── SPEC.md                # Game rules, scoring, UX, brand
 │   ├── ARCHITECTURE.md        # Tech decisions and module responsibilities
-│   └── SCENARIOS-GUIDE.md     # How to write and add scenarios
+│   ├── SCENARIOS-GUIDE.md     # How to write and add scenarios
+│   └── OUTSYSTEMS-HANDOVER.md # Entities, actions, screens for OutSystems rebuild
 ├── src/
 │   ├── index.html             # All 4 screens + leaderboard modal
 │   ├── css/
