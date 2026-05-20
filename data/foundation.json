@@ -1,0 +1,90 @@
+[
+  {
+    "id": "F1",
+    "scenario": "A food distributor's demand forecasting model is 15% less accurate than the Excel model it replaced, despite using more data.",
+    "domain": "foundation",
+    "why": "More data isn't better data. The model consumes inconsistent or stale data from poorly integrated sources. The model isn't wrong; the data pipeline is.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "F2",
+    "scenario": "A utility company wants to offer real-time energy usage insights to customers, but their metering data arrives in 24-hour batches.",
+    "domain": "foundation",
+    "why": "You can't build real-time features on batch data. No UX or model compensates for data that's a day old. Infrastructure needs to change first.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "F3",
+    "scenario": "Two departments in a government agency report different counts for the same metric to parliament because they query different databases.",
+    "domain": "foundation",
+    "why": "No single source of truth. Two systems, two versions of reality. Data architecture and integration problem.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "F4",
+    "scenario": "A pharmaceutical company's clinical trial data takes 6 weeks to compile for regulatory submission because it sits in 8 separate systems with different schemas.",
+    "domain": "foundation",
+    "why": "Data spread across incompatible systems with no unified model. The delay is manual stitching. Fix the data architecture.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "F5",
+    "scenario": "An e-commerce platform's recommendation engine gives great suggestions on the website but terrible ones in the mobile app, using the same model.",
+    "domain": "foundation",
+    "why": "Same model, different results means different input data. The mobile app sends incomplete user behavior data. The model is fine; the mobile data pipeline is broken.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "F6",
+    "scenario": "A logistics company built a route optimization tool, but dispatchers can only use it for 30% of routes because partner carriers don't share data.",
+    "domain": "foundation",
+    "why": "Optimization works. Partner carrier data is inaccessible. Integration gap. The tool is limited by architecture, not by its algorithm.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "F7",
+    "scenario": "Every time the ERP vendor releases a quarterly update, two of your custom connections break and take a week to fix.",
+    "domain": "foundation",
+    "why": "Fragile connections without contract testing or abstraction layers. Integration architecture and resilience problem.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "T3",
+    "scenario": "You want to build a smart document search across your company's SharePoint, but employees have been saving files with names like 'final_v3_REAL_final_updated.docx' for 10 years.",
+    "domain": "foundation",
+    "why": "Instinct says smart search handles messy naming. But searching over chaos gives confidently wrong results. Document governance and metadata structure need fixing first.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "T4b",
+    "scenario": "A retail chain uses personalized marketing emails. Open rates are high, but conversion is 0.3% because recommended products are often out of stock.",
+    "domain": "foundation",
+    "why": "Personalization works (high open rates prove it). Inventory data is stale or disconnected from the marketing system. The recommendations are for products that don't exist on the shelf.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "T5",
+    "scenario": "Your HR department wants to screen CVs automatically. Your historical hiring data shows you've only ever hired from 4 universities.",
+    "domain": "foundation",
+    "why": "Training data reflects a biased historical process. Automating on this data amplifies bias. Fix the data and process before automating.",
+    "decoys": ["intelligence", "experience"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "T6",
+    "scenario": "A city's parking app shows real-time availability, but drivers report that 'available' spots are always taken when they arrive.",
+    "domain": "foundation",
+    "why": "Sensor data latency or coverage gaps mean the app's data is wrong. The UI faithfully displays bad data. Fix the data pipeline.",
+    "decoys": ["experience", "intelligence"],
+    "difficulty": "medium"
+  }
+]

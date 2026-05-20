@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Got GRIP?</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- Screen 1: Landing -->
+  <div id="screen-landing" class="screen active">
+    <div class="landing-content">
+      <header>
+        <h1 class="game-title">Got <em>GRIP</em>?</h1>
+        <p class="tagline">Every business problem has a right solution layer.<br>Can you spot which one?</p>
+      </header>
+
+      <div class="domain-pills">
+        <div class="domain-pill experience">
+          <span class="domain-dot"></span>
+          <span><strong>Experience</strong> — The fix is design.</span>
+        </div>
+        <div class="domain-pill foundation">
+          <span class="domain-dot"></span>
+          <span><strong>Foundation</strong> — Fix the plumbing.</span>
+        </div>
+        <div class="domain-pill intelligence">
+          <span class="domain-dot"></span>
+          <span><strong>Intelligence</strong> — An agent fits.</span>
+        </div>
+      </div>
+
+      <button id="btn-start" class="btn btn-primary btn-full">Start</button>
+
+      <div id="leaderboard-preview" class="leaderboard-preview hidden">
+        <h3>Top Scores</h3>
+        <ol id="leaderboard-list" class="leaderboard-list"></ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screen 2: Briefing -->
+  <div id="screen-briefing" class="screen">
+    <div class="briefing-content">
+      <h2 class="briefing-headline">Every business problem has a right solution layer. Can you spot which one?</h2>
+
+      <div class="briefing-domains">
+        <div class="briefing-domain experience">
+          <strong>Experience</strong>
+          <p>The app works, but users struggle. The fix is design.</p>
+        </div>
+        <div class="briefing-domain foundation">
+          <strong>Foundation</strong>
+          <p>The systems are broken or disconnected. Fix the plumbing.</p>
+        </div>
+        <div class="briefing-domain intelligence">
+          <strong>Intelligence</strong>
+          <p>This needs reasoning or language at scale. An agent fits.</p>
+        </div>
+      </div>
+
+      <p class="briefing-cta-text">Tap the right color. Beat the clock. 12 scenarios.</p>
+
+      <button id="btn-play" class="btn btn-primary btn-full">Got GRIP?</button>
+    </div>
+  </div>
+
+  <!-- Screen 3: Game -->
+  <div id="screen-game" class="screen">
+    <div class="game-header">
+      <div class="score-block">
+        <span class="score-label">Score</span>
+        <span id="score-value" class="score-value">0</span>
+      </div>
+      <span id="progress-display" class="progress-display">1 / 12</span>
+    </div>
+
+    <div class="timer-track">
+      <div id="timer-bar" class="timer-bar"></div>
+    </div>
+
+    <div class="scenario-area">
+      <div id="scenario-card" class="scenario-card">
+        <p id="scenario-text" class="scenario-text"></p>
+      </div>
+    </div>
+
+    <div class="answer-buttons">
+      <button class="btn-domain btn-experience" data-domain="experience">
+        <span>Experience</span>
+      </button>
+      <button class="btn-domain btn-foundation" data-domain="foundation">
+        <span>Foundation</span>
+      </button>
+      <button class="btn-domain btn-intelligence" data-domain="intelligence">
+        <span>Intelligence</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Screen 4: Results -->
+  <div id="screen-results" class="screen">
+    <div class="results-content">
+      <h2 class="results-title">Your GRIP</h2>
+
+      <div class="results-score-row">
+        <div class="results-stat">
+          <span class="results-stat-value">
+            <span id="results-score">0</span>
+            <span class="results-stat-max"> / 1800</span>
+          </span>
+          <span class="results-stat-label">Score</span>
+        </div>
+        <div class="results-stat">
+          <span id="results-accuracy" class="results-stat-value">0%</span>
+          <span class="results-stat-label">Accuracy</span>
+        </div>
+        <div class="results-stat">
+          <span id="results-speed" class="results-stat-value">0s</span>
+          <span class="results-stat-label">Avg Speed</span>
+        </div>
+      </div>
+
+      <!-- Domain breakdown bars -->
+      <div class="domain-breakdown">
+        <div class="breakdown-row" data-domain="experience">
+          <span class="breakdown-label">Experience</span>
+          <div class="breakdown-track">
+            <div class="breakdown-fill experience"></div>
+          </div>
+          <span class="breakdown-count"></span>
+        </div>
+        <div class="breakdown-row" data-domain="foundation">
+          <span class="breakdown-label">Foundation</span>
+          <div class="breakdown-track">
+            <div class="breakdown-fill foundation"></div>
+          </div>
+          <span class="breakdown-count"></span>
+        </div>
+        <div class="breakdown-row" data-domain="intelligence">
+          <span class="breakdown-label">Intelligence</span>
+          <div class="breakdown-track">
+            <div class="breakdown-fill intelligence"></div>
+          </div>
+          <span class="breakdown-count"></span>
+        </div>
+      </div>
+
+      <!-- Spider diagram -->
+      <div class="spider-container">
+        <svg id="spider-diagram" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!-- Blind spot insight -->
+      <div id="insight-text" class="insight-text"></div>
+
+      <!-- Per-question review -->
+      <div class="review-section">
+        <h3 class="review-heading">Question Review</h3>
+        <ul id="review-list" class="review-list"></ul>
+      </div>
+
+      <div class="results-actions">
+        <button id="btn-leaderboard" class="btn btn-secondary btn-full">Add to Leaderboard</button>
+        <button id="btn-play-again" class="btn btn-primary btn-full">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaderboard modal -->
+  <div id="leaderboard-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Add Your Score</h3>
+      <input
+        type="text"
+        id="player-name"
+        class="name-input"
+        placeholder="Your name"
+        maxlength="30"
+        autocomplete="off"
+      />
+      <button id="btn-submit-score" class="btn btn-primary btn-full">Submit</button>
+      <button id="btn-cancel-modal" class="btn btn-ghost btn-full">Cancel</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

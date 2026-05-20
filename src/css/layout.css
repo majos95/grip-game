@@ -1,0 +1,100 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100dvh;
+  background: var(--bg-cream);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* All screens are fixed-position and hidden by default */
+.screen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg-cream);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content wrappers for scrollable screens */
+.landing-content,
+.briefing-content,
+.results-content {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex: 1;
+}
+
+/* Game screen is a fixed flex layout — no scroll */
+#screen-game {
+  overflow: hidden;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 12px;
+  flex-shrink: 0;
+}
+
+.scenario-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  min-height: 0;
+}
+
+.answer-buttons {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px 36px;
+  flex-shrink: 0;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .landing-content,
+  .briefing-content,
+  .results-content {
+    padding: 56px 32px 64px;
+    gap: 32px;
+  }
+
+  .game-header {
+    padding: 24px 32px 16px;
+  }
+
+  .answer-buttons {
+    padding: 16px 32px 48px;
+    gap: 12px;
+  }
+
+  .scenario-area {
+    padding: 16px 32px;
+  }
+}

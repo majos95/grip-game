@@ -1,0 +1,82 @@
+[
+  {
+    "id": "I1",
+    "scenario": "A law firm receives 200 contracts per week from different clients, each in a different template. Paralegals spend 4 hours per contract extracting key dates, obligations, and liability clauses.",
+    "domain": "intelligence",
+    "why": "Unstructured, varied documents requiring reading comprehension, entity extraction, and contextual judgment across formats. Agent with document understanding handles this at scale.",
+    "decoys": ["experience", "foundation"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "I2",
+    "scenario": "A property management company gets maintenance requests via email, WhatsApp, phone calls, and a web form. Each channel uses different language to describe the same problem.",
+    "domain": "intelligence",
+    "why": "Multi-channel unstructured input in natural language. An agent normalizes, classifies, and routes regardless of phrasing. Rules-based approach would need infinite branches.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "I3",
+    "scenario": "A compliance officer at a bank spends 3 days per week reading regulatory updates from 12 different authorities to determine which ones affect their products.",
+    "domain": "intelligence",
+    "why": "High-volume text analysis requiring contextual understanding of which regulations apply to which products. Reading comprehension + domain reasoning at scale.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "I4",
+    "scenario": "A municipality receives 15,000 citizen feedback submissions per year. They categorize them manually, and 40% are miscategorized.",
+    "domain": "intelligence",
+    "why": "Natural language classification at scale with nuance. Citizens describe issues in their own words. An agent handles ambiguity and context better than keyword rules.",
+    "decoys": ["experience", "foundation"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "I5",
+    "scenario": "A wholesale distributor's sales team needs to identify which of their 3,000 customers are likely to reduce orders next quarter, based on order history, email tone, and market news.",
+    "domain": "intelligence",
+    "why": "Multi-signal pattern recognition across structured and unstructured data. Combining order data, communication sentiment, and market context requires reasoning.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "I6",
+    "scenario": "A construction company has 20 years of project post-mortems in PDF format. New project managers keep making the same mistakes because nobody reads the archives.",
+    "domain": "intelligence",
+    "why": "Institutional knowledge locked in unstructured documents. An agent can index, search, and surface relevant lessons learned contextually. RAG use case.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "I7",
+    "scenario": "A customer service team handles product returns. Each case requires checking warranty terms, purchase date, damage photos, and return policy exceptions. It takes 25 minutes per case.",
+    "domain": "intelligence",
+    "why": "Multimodal (photos + text + policy documents) with decision logic that varies per case. Agent analyzes damage, cross-references terms, recommends decision.",
+    "decoys": ["experience", "foundation"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "I8",
+    "scenario": "A shipping company receives 500 booking requests per day via email, each containing different combinations of origin, destination, cargo type, weight, and special handling requirements buried in free text.",
+    "domain": "intelligence",
+    "why": "Structured data extraction from unstructured email at volume. Formats vary wildly. An agent parses, validates, and creates structured bookings.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "I9",
+    "scenario": "An energy company monitors 2,000 wind turbines. Maintenance teams want to know which ones will fail next month based on vibration patterns, weather exposure, age, and service history.",
+    "domain": "intelligence",
+    "why": "Predictive maintenance combining sensor data, environmental factors, and historical patterns. Multi-variable reasoning over time-series data.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "T7",
+    "scenario": "A government agency needs to redact personal information from 50,000 scanned documents before public release.",
+    "domain": "intelligence",
+    "why": "Scanned documents require OCR + entity recognition + contextual judgment about what constitutes PII in different contexts. Not a batch processing job; requires understanding.",
+    "decoys": ["foundation", "experience"],
+    "difficulty": "hard"
+  }
+]

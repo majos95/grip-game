@@ -1,0 +1,82 @@
+[
+  {
+    "id": "E1",
+    "scenario": "A logistics company built a real-time shipment tracker. Drivers call dispatch instead of using it because they say 'it takes too many taps to update a status.'",
+    "domain": "experience",
+    "why": "The tech works. Drivers reject it because the interaction design doesn't match their context (driving, gloves, rushed). Form factor and UX problem.",
+    "decoys": ["foundation", "intelligence"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "E2",
+    "scenario": "An insurance company's claims dashboard shows all the right data, but adjusters still maintain personal spreadsheets to track their caseload.",
+    "domain": "experience",
+    "why": "Data is correct and accessible. Adjusters don't trust the dashboard or it doesn't match their mental model. They've built a shadow system. UX research problem.",
+    "decoys": ["foundation", "intelligence"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "E3",
+    "scenario": "After migrating to a new HR platform, time-to-hire increased by 40% even though the new system has more automation features.",
+    "domain": "experience",
+    "why": "More features created more complexity. The automation exists but isn't surfaced in a way that matches recruiter workflows. The tool slowed people down.",
+    "decoys": ["foundation", "intelligence"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "E4",
+    "scenario": "A bank's mortgage application takes 3 days to process. 2.5 of those days the application sits in someone's queue because they didn't know it was their turn.",
+    "domain": "experience",
+    "why": "Process logic is fine. Handoff visibility is the problem. People don't see what's waiting for them, or notifications are buried. Workflow visibility design problem.",
+    "decoys": ["foundation", "intelligence"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "E5",
+    "scenario": "A hospital built a patient intake form that collects 47 fields. Nurses enter fake data in optional fields to get past validation faster during peak hours.",
+    "domain": "experience",
+    "why": "The system enforces a rigid flow that doesn't match reality. Nurses game it because the form doesn't adapt to context. Progressive disclosure and context-aware design would fix this.",
+    "decoys": ["intelligence", "foundation"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "E6",
+    "scenario": "A manufacturing company's quality control app flags defects accurately, but floor supervisors override 60% of the flags without investigation.",
+    "domain": "experience",
+    "why": "Detection works. Supervisors don't trust it or the cost of investigating every flag is too high relative to how alerts are presented. Better prioritization and confidence visualization would change behavior.",
+    "decoys": ["intelligence", "foundation"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "E7",
+    "scenario": "A retailer launched a supplier self-service portal. After 6 months, only 12% of suppliers use it. The rest still email their account manager.",
+    "domain": "experience",
+    "why": "Portal works. Suppliers prefer email because the portal is harder than sending a message. Onboarding friction, navigation complexity, or lack of trust. Adoption and UX problem.",
+    "decoys": ["foundation", "intelligence"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "T1",
+    "scenario": "Your company's chatbot resolves 70% of customer queries, but your NPS score dropped 15 points since launching it.",
+    "domain": "experience",
+    "why": "The chatbot works technically. NPS dropped because the experience of interacting with it is poor: forced bot-first flows, no easy human escalation, impersonal tone. Conversational UX problem.",
+    "decoys": ["intelligence", "foundation"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "T2",
+    "scenario": "Your fraud detection system catches 95% of fraudulent transactions. Your fraud team still reviews every flagged case manually because they don't trust it.",
+    "domain": "experience",
+    "why": "The model is excellent. The problem is how confidence scores are communicated. Explainability, clear escalation criteria, and trust-building in the interface would change adoption.",
+    "decoys": ["intelligence", "foundation"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "T4",
+    "scenario": "Your internal tool auto-generates reports, but managers rewrite 80% of the executive summary before sharing it.",
+    "domain": "experience",
+    "why": "The report template doesn't match how managers communicate. Understanding what they change and why is a UX research task. Redesign the output format.",
+    "decoys": ["intelligence", "foundation"],
+    "difficulty": "hard"
+  }
+]

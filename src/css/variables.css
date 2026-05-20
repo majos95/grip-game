@@ -1,0 +1,31 @@
+:root {
+  --bg-cream: #FCF5EF;
+  --bg-light-gray: #F7F0EB;
+  --domain-experience: #FF4D4D;
+  --domain-foundation: #3626EF;
+  --domain-intelligence: #6B3FA0;
+  --domain-experience-bg: #FFF0EC;
+  --domain-foundation-bg: #EEEEFF;
+  --domain-intelligence-bg: #F3EEFA;
+  --text-primary: #1A1715;
+  --text-secondary: #53504E;
+  --text-muted: #A19D9B;
+  --border: #D4CDC9;
+  --correct: #2ECC71;
+  --incorrect: #E74C3C;
+  --team-blue: #3626EF;
+  --dark-blue: #0F238C;
+  --white: #FFFFFF;
+
+  --font-heading: Tahoma, Arial, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
